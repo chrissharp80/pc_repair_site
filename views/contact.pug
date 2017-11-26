@@ -1,7 +1,14 @@
 extends layout
 
 block content
-    p
-        | Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa earum eligendi vero repellendus error tempore quasi illum quaerat itaque quos neque eum similique ducimus harum eos autem, sapiente beatae reprehenderit?
-    p
-        | Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa earum eligendi vero repellendus error tempore quasi illum quaerat itaque quos neque eum similique ducimus harum eos autem, sapiente beatae reprehenderit?
+	form(method='post', action='contact/send')
+		.form-group
+			label Name
+			input.form-control(type='text', name='name', placeholder='Enter Name')
+		.form-group
+			label Email
+			input.form-control(type='email', name='email', placeholder='Enter Email')
+		.form-group
+			label Message
+			textarea.form-control(name='message', placeholder='Enter Message', rows='3')
+		button.btn.btn-primary(type='submit') Submit
